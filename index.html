@@ -139,7 +139,37 @@
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                     <div class="d-flex justify-content-between flex-lg-wrap">
                                                         <p class="text-dark fs-5 fw-bold mb-0">$4.99</p>
-                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" data-nama-produk="Sencha" data-harga="4.99">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                        <script>
+                                                        $(document).ready(function() {
+                                                            $('.add-to-cart').on('click', function(e) {
+                                                                e.preventDefault();
+                                                        
+                                                                var nama_produk = $(this).data('nama-produk');
+                                                                var harga = $(this).data('harga');
+                                                        
+                                                                console.log("Mengirim data ke add_to_cart.php: ", { nama_produk: nama_produk, harga: harga });
+                                                        
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "add_to_cart.php",
+                                                                    data: { nama_produk: nama_produk, harga: harga },
+                                                                    success: function(response) {
+                                                                        console.log("Response dari server: ", response);
+                                                                        alert(response);
+                                                                    },
+                                                                    error: function(xhr, status, error) {
+                                                                        console.error("Error: " + error);
+                                                                        console.error("Status: " + status);
+                                                                        console.dir(xhr);
+                                                                        alert('Gagal menambahkan ke keranjang.');
+                                                                    }
+                                                                });
+                                                            });
+                                                        });
+                                                        </script>
                                                     </div>
                                                 </div>
                                             </div>
