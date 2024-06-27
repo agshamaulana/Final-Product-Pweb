@@ -262,7 +262,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.40.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceSencha" class="text-dark fs-5 fw-bold mb-0">$4.99</p>
+                                                        <form method="post" action="add_to_cart.php">
+                                                            <input type="hidden" name="item" value="Sencha">
+                                                        <input type="hidden" name="harga" value="40000">
+                                                        <input type="hidden" name="total_harga" value="40000">
+                                                            <div class="d-flex align-items-center">
+                                                                <label for="quantitySencha" class="me-2">Quantity:</label>
+                                                                <input type="number" id="quantitySencha" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                            </div>
+                                                            <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                            </button>
+                                                        </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -278,7 +290,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.35.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceCeylon" class="text-dark fs-5 fw-bold mb-0">Rp. 35000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Ceylon">
+                                                        <input type="hidden" name="harga" value="35000">
+                                                        <input type="hidden" name="total_harga" value="35000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityCeylon" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityCeylon" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,7 +318,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.50.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceRose" class="text-dark fs-5 fw-bold mb-0">Rp.50000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Rose">
+                                                        <input type="hidden" name="harga" value="50000">
+                                                        <input type="hidden" name="total_harga" value="50000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityRose" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityRose" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -306,11 +342,23 @@
                                             </div>
                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Green Tea</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>bancha</h4>
+                                                <h4>Bancha</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.45.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceBancha" class="text-dark fs-5 fw-bold mb-0">Rp.45000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Bancha">
+                                                        <input type="hidden" name="harga" value="45000">
+                                                        <input type="hidden" name="total_harga" value="45000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityBancha" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityBancha" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -326,7 +374,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.35.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceEarlyGrey" class="text-dark fs-5 fw-bold mb-0">Rp.50000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Early Grey">
+                                                        <input type="hidden" name="harga" value="35000">
+                                                        <input type="hidden" name="total_harga" value="35000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityEarlyGrey" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityEarlyGrey" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -338,11 +398,23 @@
                                             </div>
                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Herbal Tea</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>rosemary </h4>
+                                                <h4>Rosemary </h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.55.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceRosemary" class="text-dark fs-5 fw-bold mb-0">Rp.50000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Rosemary">
+                                                        <input type="hidden" name="harga" value="55000">
+                                                        <input type="hidden" name="total_harga" value="55000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityRosemary" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityRosemary" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -358,7 +430,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.40.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceMatcha" class="text-dark fs-5 fw-bold mb-0">Rp.50000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Matcha">
+                                                        <input type="hidden" name="harga" value="40000">
+                                                        <input type="hidden" name="total_harga" value="40000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityMatcha" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityMatcha" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -374,7 +458,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.30.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <p id="priceDarjeeling" class="text-dark fs-5 fw-bold mb-0">Rp.30000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Darjeeling">
+                                                        <input type="hidden" name="harga" value="30000">
+                                                        <input type="hidden" name="total_harga" value="30000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityDarjeeling" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityDarjeeling" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -390,8 +486,19 @@
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.35.000 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
+                                                    <p id="pricePeppermint" class="text-dark fs-5 fw-bold mb-0">Rp.35000</p>
+                                                    <form method="post" action="add_to_cart.php">
+                                                        <input type="hidden" name="item" value="Pepermint">
+                                                        <input type="hidden" name="harga" value="35000">
+                                                        <input type="hidden" name="total_harga" value="35000">
+                                                        <div class="d-flex align-items-center">
+                                                            <label for="quantityPeppermint" class="me-2">Quantity:</label>
+                                                            <input type="number" id="quantityPeppermint" name="quantity" value="1" min="1" class="form-control me-3" style="width: 70px;">
+                                                        </div>
+                                                        <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                        </button>
+                                                    </form>
                                             </div>
                                         </div>
                                     </div>
@@ -493,6 +600,66 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Fungsi untuk mengupdate harga berdasarkan quantity
+    function updatePrice(event) {
+        var quantityInput = event.target;
+        var container = quantityInput.closest('.p-4');
+        var priceElement = container.querySelector('p[id^="price"]');
+        var hargaInput = container.querySelector('input[name="harga"]');
+        var totalHargaInput = container.querySelector('input[name="total_harga"]');
+        
+        var quantity = parseInt(quantityInput.value);
+        var harga = parseFloat(hargaInput.value);
+        var totalPrice = (quantity * harga).toFixed(2);
+        
+        // Update nilai total harga dan tampilkan di form
+        totalHargaInput.value = totalPrice;
+        priceElement.innerText = 'Rp.' + totalPrice;
+    }
+
+    // Menambahkan event listener pada semua input quantity untuk memanggil fungsi updatePrice()
+    var quantityInputs = document.querySelectorAll('input[type="number"][id^="quantity"]');
+    quantityInputs.forEach(function(input) {
+        input.addEventListener('change', updatePrice);
+        input.addEventListener('keyup', updatePrice); // Jika ingin memperbarui harga secara real-time
+    });
+
+    // Panggil fungsi updatePrice() saat halaman dimuat untuk menginisialisasi harga awal
+    quantityInputs.forEach(function(input) {
+        updatePrice({target: input});
+    });
+
+    // Menambahkan event listener pada form untuk menangani pengiriman form dan menampilkan alert
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form secara default
+
+            var formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+            });
+        });
+    });
+});
+
+
+        </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
