@@ -74,6 +74,55 @@
         </div>
         <!-- Modal Search End -->
 
+            <!-- Modal Payment Start -->
+            <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="paymentModalLabel">Pilihan Pembayaran</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="paymentForm">
+                                <div class="form-group">
+                                    <label for="paymentMethod">Pilih Metode Pembayaran</label>
+                                    <select class="form-control" id="paymentMethod" name="paymentMethod">
+                                        <option value="bank_transfer">Transfer Bank</option>
+                                        <option value="e_wallet">E-Wallet</option>
+                                        <option value="cash">Cash</option>
+                                    </select>
+                                </div>
+                                <div id="paymentInfo" class="mt-3" style="display: none;">
+                                    <div id="bank_transfer_info" style="display: none;">
+                                        <h5>Transfer Bank</h5>
+                                        <p>Silakan transfer ke rekening berikut:</p>
+                                        <p><strong>Bank: BCA</strong></p>
+                                        <p><strong>Nomor Rekening: 123456789</strong></p>
+                                        <p><strong>Atas Nama: Teavou</strong></p>
+                                    </div>
+                                    <div id="e_wallet_info" style="display: none;">
+                                        <h5>E-Wallet</h5>
+                                        <p>Silakan scan QRIS berikut:</p>
+                                        <img src="img/qris.png" alt="QRIS" style="width: 200px;">
+                                    </div>
+                                    <div id="cash_info" style="display: none;">
+                                        <h5>Cash</h5>
+                                        <p><strong>Silahkan lakukan Pembayaran secara Tunai.</strong></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                            <button type="button" class="btn btn-primary" id="confirm-payment">Konfirmasi Pembayaran</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--Modal Payment End-->
+
 
         <!-- Single Page Header start -->
         <div class="container-fluid page-header py-5">
@@ -83,130 +132,23 @@
 
 
         <!-- Cart Page Start -->
+        
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                          <tr>
-                            <th scope="col">Products</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Handle</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">Products</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Hapus</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <img src="img/greentea-1.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                                    </div>
-                                </th>
-                                <td>
-                                    <p class="mb-0 mt-4">Matcha</p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.40.000 </p>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity mt-4" style="width: 100px;">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                            <i class="fa fa-minus"></i>
-                                            </button>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.40.000 </p>
-                                </td>
-                                <td>
-                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                                        <i class="fa fa-times text-danger"></i>
-                                    </button>
-                                </td>
-                            
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <img src="img/herbal1.jpeg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
-                                    </div>
-                                </th>
-                                <td>
-                                    <p class="mb-0 mt-4">Rose</p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.50.000</p>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity mt-4" style="width: 100px;">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                            <i class="fa fa-minus"></i>
-                                            </button>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.50.000</p>
-                                </td>
-                                <td>
-                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                                        <i class="fa fa-times text-danger"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <img src="img/hitam1.jpeg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
-                                    </div>
-                                </th>
-                                <td>
-                                    <p class="mb-0 mt-4">Ceylon</p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.35.000</p>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity mt-4" style="width: 100px;">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                            <i class="fa fa-minus"></i>
-                                            </button>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">Rp.35.000</p>
-                                </td>
-                                <td>
-                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
-                                        <i class="fa fa-times text-danger"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                        <tbody id="cart-items">
+                            <!-- Item  will be dynamically added here -->
                         </tbody>
                     </table>
                 </div>
@@ -222,7 +164,7 @@
                                 <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
                                 <div class="d-flex justify-content-between mb-4">
                                     <h5 class="mb-0 me-4">Subtotal:</h5>
-                                    <p class="mb-0">Rp.125.000</p>
+                                    <p class="mb-0" id="subtotal">Rp.0</p>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <h5 class="mb-0 me-4">Shipping</h5>
@@ -234,14 +176,259 @@
                             </div>
                             <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                                 <h5 class="mb-0 ps-4 me-4">Total</h5>
-                                <p class="mb-0 pe-4">Rp.140.000</p>
+                                <p class="mb-0 pe-4" id="total">Rp.0</p>
                             </div>
-                            <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Proceed Checkout</button>
+                            <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" id="proceed-checkout">Proceed Checkout</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Fungsi untuk memuat data keranjang dari server saat halaman dimuat
+                loadCartItems();
+    
+                // Tombol Quantity +
+                $(document).on('click', '.btn-plus', function() {
+                    var itemId = $(this).closest('tr').data('item-id');
+                    var quantityInput = $(this).closest('.input-group').find('.quantity-input');
+                    var newQuantity = parseInt(quantityInput.val()) + 1;
+                    updateCartItem(itemId, newQuantity, quantityInput);
+                });
+    
+                // Tombol Quantity -
+                $(document).on('click', '.btn-minus', function() {
+                    var itemId = $(this).closest('tr').data('item-id');
+                    var quantityInput = $(this).closest('.input-group').find('.quantity-input');
+                    var currentQuantity = parseInt(quantityInput.val());
+                    if (currentQuantity > 1) {
+                        var newQuantity = currentQuantity - 1;
+                        updateCartItem(itemId, newQuantity, quantityInput);
+                    }
+                });
+    
+                // Fungsi untuk memuat data keranjang dari server
+                function loadCartItems() {
+                    $.ajax({
+                        url: 'php/view_cart.php',
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function(response) {
+                            var cartItemsHtml = '';
+                            var subtotal = 0;
+    
+                            $.each(response, function(index, item) {
+                                var totalHarga = parseFloat(item.harga) * parseInt(item.quantity);
+                                subtotal += totalHarga;
+    
+                                cartItemsHtml += `
+                                    <tr data-item-id="${item.id}">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/${item.item.toLowerCase()}.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="${item.item}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="mb-0 mt-4">${item.item}</p>
+                                        </td>
+                                        <td>
+                                            <p class="mb-0 mt-4">Rp.${item.harga}</p>
+                                        </td>
+                                        <td>
+                                            <div class="input-group quantity mt-4" style="width: 100px;">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <input type="text" class="form-control form-control-sm text-center border-0 quantity-input" value="${item.quantity}">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="mb-0 mt-4">Rp.${totalHarga}</p>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-md rounded-circle bg-light border mt-4 handle-delete">
+                                                <i class="fa fa-times text-danger"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                `;
+                            });
+    
+                            $('#cart-items').html(cartItemsHtml);
+                            $('#subtotal').text('Rp.' + subtotal);
+                            var total = subtotal + 15000; // Flat rate shipping
+                            $('#total').text('Rp.' + total);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(xhr.responseText);
+                            // Tampilkan pesan error jika diperlukan
+                        }
+                    });
+                }
+    
+                // Fungsi untuk mengupdate jumlah item di keranjang
+                function updateCartItem(itemId, newQuantity, quantityInput) {
+                    $.ajax({
+                        url: 'php/update_cart.php',
+                        method: 'POST',
+                        data: { item_id: itemId, quantity: newQuantity },
+                        dataType: 'json',
+                        success: function(response) {
+                            // Update nilai input quantity dan reload cart items
+                            quantityInput.val(newQuantity);
+                            loadCartItems(); // Memuat ulang daftar keranjang setelah update
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(xhr.responseText);
+                            // Tampilkan pesan error jika diperlukan
+                        }
+                    });
+                }
+
+                //fungsi untuk delete data dari server
+                    $(document).on('click', '.handle-delete', function() {
+                    var itemId = $(this).closest('tr').data('item-id');
+                    deleteCartItem(itemId);
+                });
+
+                function deleteCartItem(itemId) {
+                    $.ajax({
+                        url: 'php/delete_from_cart.php',
+                        method: 'POST',
+                        data: { item_id: itemId },
+                        dataType: 'json',
+                        success: function(response) {
+                            // Muat ulang item keranjang setelah menghapus
+                            loadCartItems();
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(xhr.responseText);
+                            // Tampilkan pesan error jika diperlukan
+                        }
+                    });
+                }
+
+    
+                        // Fungsi untuk checkout
+        // Menampilkan modal pilihan pembayaran saat klik checkout
+        $('#proceed-checkout').click(function() {
+            $('#paymentModal').modal('show');
+        });
+
+        // Menangani perubahan metode pembayaran
+        $('#paymentMethod').change(function() {
+            var paymentMethod = $(this).val();
+            $('#paymentInfo').show();
+            $('#bank_transfer_info').hide();
+            $('#e_wallet_info').hide();
+            $('#cash_info').hide();
+            if (paymentMethod == 'bank_transfer') {
+                $('#bank_transfer_info').show();
+            } else if (paymentMethod == 'e_wallet') {
+                $('#e_wallet_info').show();
+            } else if (paymentMethod == 'cash') {
+                $('#cash_info').show();
+            }
+        });
+
+        // Menangani konfirmasi pembayaran
+        $('#confirm-payment').click(function() {
+            var paymentMethod = $('#paymentMethod').val();
+            checkoutCart(paymentMethod);
+        });
+
+        function checkoutCart(paymentMethod) {
+            $.ajax({
+                url: 'php/checkout.php',
+                method: 'POST',
+                data: { payment_method: paymentMethod },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        alert('Checkout berhasil!');
+                        // Tutup modal
+                        $('#paymentModal').modal('hide');
+                        // Muat ulang item keranjang setelah checkout berhasil
+                        loadCartItems();
+                    } else {
+                        alert('Checkout gagal: ' + response.error);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                    alert('Terjadi kesalahan saat checkout.');
+                }
+            });
+        }
+    });
+        </script>
+        
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script>
+    $(document).ready(function() {
+        // Mengambil data keranjang belanja dari view_cart.php menggunakan AJAX
+        $.ajax({
+            url: 'php/view_cart.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Memproses data yang diterima dari server
+                var cartItemsHtml = '';
+
+                // Loop untuk setiap item dalam data
+                for (var i = 0; i < data.length; i++) {
+                    var item = data[i];
+
+                    // Membuat baris baru untuk setiap item dalam tabel
+                    cartItemsHtml += '<tr>';
+                    cartItemsHtml += '<td><div class="d-flex align-items-center"><img src="img/' + item.item + '.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt=""></div></td>';
+                    cartItemsHtml += '<td><p class="mb-0 mt-4">' + item.item + '</p></td>';
+                    cartItemsHtml += '<td><p class="mb-0 mt-4">Rp.' + item.harga + '</p></td>';
+                    cartItemsHtml += '<td><div class="input-group quantity mt-4" style="width: 100px;"><div class="input-group-btn">';
+                    cartItemsHtml += '<button class="btn btn-sm btn-minus rounded-circle bg-light border"><i class="fa fa-minus"></i></button></div>';
+                    cartItemsHtml += '<input type="text" class="form-control form-control-sm text-center border-0" value="' + item.quantity + '">';
+                    cartItemsHtml += '<div class="input-group-btn"><button class="btn btn-sm btn-plus rounded-circle bg-light border"><i class="fa fa-plus"></i></button></div></div></td>';
+                    cartItemsHtml += '<td><p class="mb-0 mt-4">Rp.' + item.total_harga + '</p></td>';
+                    cartItemsHtml += '<td><button class="btn btn-md rounded-circle bg-light border mt-4"><i class="fa fa-times text-danger"></i></button></td>';
+                    cartItemsHtml += '</tr>';
+                }
+
+                // Memasukkan HTML yang dibuat ke dalam tbody dengan id "cartItems"
+                $('#cartItems').html(cartItemsHtml);
+
+                // Menghitung subtotal dan total dari data keranjang belanja
+                var subtotal = 0;
+                for (var i = 0; i < data.length; i++) {
+                    subtotal += parseFloat(data[i].total_harga);
+                }
+                $('#subtotal').text('Rp.' + subtotal.toFixed(2));
+
+                var total = subtotal + 15000; // Menambahkan biaya pengiriman flat rate
+                $('#total').text('Rp.' + total.toFixed(2));
+            },
+            error: function(xhr, status, error) {
+                // Menangani kesalahan jika terjadi
+                console.error('Terjadi kesalahan dalam mengambil data keranjang belanja:', status, error);
+            }
+        });
+    });
+</script>
         <!-- Cart Page End -->
 
        
@@ -321,6 +508,12 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            window.onload = function() {
+                document.getElementById("e_wallet_info").style.display = "block";
+            };
+        </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
