@@ -1,34 +1,30 @@
 <?php
-$servername = "localhost";
-$username = 'root';
-$password = "fp123";
-$dbname = "teavoudb";
+// Koneksi ke database
+$conn = mysqli_connect("localhost", "root", "", "teavou_db");
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+// cek koneksi
 if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+    die("Koneksi gagal: " . $koneksi->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama_produk = $_POST['nama_produk'];
-    $harga = $_POST['harga'];
+// Mendapatkan data dari form
+$item = $_POST['item'];
+$harga = $_POST['harga'];
+$quantity = $_POST['quantity'];
+$total_harga = $_POST['total_harga'];
 
-    $stmt = $conn->prepare("INSERT INTO cart (nama_produk, harga) VALUES (?, ?)");
-    
-    if ($stmt === false) {
-        die("Prepare gagal: " . $conn->error);
-    }
-    
-    $stmt->bind_param("sdi", $nama_produk, $harga,);
+// Menyiapkan dan mengeksekusi pernyataan SQL
+$sql = "INSERT INTO keranjang (item, harga, quantity, total_harga) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sdid", $item, $harga, $quantity, $total_harga); // "sdid" berarti string, double, integer, double
 
-    if ($stmt->execute()) {
-        echo "Berhasil menambahkan ke keranjang";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-    $stmt->close();
+if ($stmt->execute()) {
+    echo json_encode(array("status" => "success", "message" => "Item berhasil ditambahkan ke keranjang."));
+} else {
+    echo json_encode(array("status" => "error", "message" => "Error: " . $sql . "<br>" . $conn->error));
 }
 
+// Menutup koneksi
+$stmt->close();
 $conn->close();
 ?>
