@@ -126,7 +126,7 @@
 
         <!-- Single Page Header start -->
         <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-black display-6">Cart</h1>
+            <h1 class="text-center text-white display-6">Cart</h1>
         </div>
         <!-- Single Page Header End -->
 
@@ -139,12 +139,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Products</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Total</th>
-                                <th scope="col">Hapus</th>
+                                <th scope="col">Cancel/Delete</th>
                             </tr>
                         </thead>
                         <tbody id="cart-items">
@@ -226,11 +225,6 @@
     
                                 cartItemsHtml += `
                                     <tr data-item-id="${item.id}">
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="img/${item.item.toLowerCase()}.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="${item.item}">
-                                            </div>
-                                        </td>
                                         <td>
                                             <p class="mb-0 mt-4">${item.item}</p>
                                         </td>
